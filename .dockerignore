@@ -1,0 +1,20 @@
+# 构建产物
+table-editor
+table-editor.exe
+
+# 运行数据（容器里另有卷）
+data/
+data.json
+data.json.bak
+
+# 文档与脚本不打进构建上下文
+*.md
+run.sh
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# 其他
+.git
+.gitignore
+.DS_Store

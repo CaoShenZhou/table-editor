@@ -1,0 +1,13 @@
+services:
+  table-editor:
+    build: .
+    image: table-editor:latest
+    container_name: table-editor
+    ports:
+      - "8080:8080"
+    volumes:
+      # 数据持久化：宿主机 ./data/data.json ↔ 容器 /app/data/data.json
+      - ./data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
